@@ -7,7 +7,7 @@
 - 课本出处：Year 6 英文 Unit 10 Lesson 3 Grammar（Pupil's Book p.125、Workbook p.104）
 - DSKP 对照：未核对（不写进 Hub 的 DSKP 索引）
 - 玩法：3 案（Be 14／Can 13／Do 14）＋拓展档案 `I am…aren't I`（5 题，课本外、不计分、三案后解锁）。每题三步：判断正负 → 选助动词 → 选代词；线索两级。
-- 署名：Irene 老师（creator.name 只写她，initial 取「Irene」姓氏写法待问）。
+- 署名：Hub `creator: { name: "Teacher Irene Wong", initial: "W" }`（与 tahun2-bi-punctuation 一致），工具页脚同名。
 
 ## ➡️ 下一步
 1. 老师本机点过并说「可以发布」。
