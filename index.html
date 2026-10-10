@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case Files: Question Tags</title>
+<meta name="description" content="Year 6 English · Unit 10 Lesson 3 · Build the question tag like a detective: be, can and do.">
+<link rel="stylesheet" href="styles.css">
+<script src="https://kongsi-idea.vercel.app/data/track-use.js" data-slug="tahun6-bi-questiontags" defer></script>
+</head>
+<body>
+<div class="board">
+  <header class="masthead">
+    <div class="kicker">Confidential · Grammar Bureau</div>
+    <h1>Case Files: Question Tags</h1>
+    <p>Every witness statement is missing its tag. Read the clues, build the tag, close the case.</p>
+  </header>
+
+  <main class="case-file">
+    <div class="tab">
+      <span>DETECTIVE UNIT / ENGLISH DIV.</span>
+      <span class="file-id" id="fileTag">OPEN FILES</span>
+    </div>
+    <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+
+    <div class="content">
+      <!-- 首页：案件列表 -->
+      <section id="home">
+        <div class="brief">
+          <strong>Briefing:</strong> A question tag double-checks something we believe is true.
+          <span class="rule-line">Positive statement → <b>negative</b> tag. Negative statement → <b>positive</b> tag.</span>
+          <span class="rule-line">The tag verb follows the statement: <b>be → be</b> · <b>can → can</b> · other verbs → <b>do / does</b>.</span>
+        </div>
+        <div class="case-list" id="caseList"></div>
+      </section>
+
+      <!-- 答题 -->
+      <section id="quiz" hidden>
+        <div class="case-number" id="caseNumber"></div>
+        <p class="statement" id="statement" data-hl=""></p>
+        <div class="step-title" id="stepTitle" aria-live="polite"></div>
+        <div class="choices" id="choices"></div>
+        <div class="clue-row">
+          <button class="clue-btn" id="clueBtn" type="button">Need a clue?</button>
+          <div class="clue-text" id="clueText" aria-live="polite"></div>
+        </div>
+        <div class="feedback" id="feedback" aria-live="polite" hidden>
+          <span class="verdict" id="fbVerdict"></span>
+          <span id="fbText"></span>
+          <button class="say-btn" id="sayBtn" type="button" hidden aria-label="Listen to the full sentence">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 9v6h4l5 4V5L7 9H3z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <span>Listen</span>
+          </button>
+        </div>
+        <button class="primary" id="nextBtn" type="button" hidden>Next statement →</button>
+      </section>
+
+      <!-- 结算 -->
+      <section id="results" hidden>
+        <div class="stamp" id="stamp">Case Closed</div>
+        <div class="score-big" id="scoreBig"></div>
+        <div class="rank" id="rankText"></div>
+        <div class="summary-line" id="summaryLine"></div>
+        <div class="miss-list" id="missList"></div>
+        <button class="primary" id="retryMissBtn" type="button" hidden>Redo the missed statements</button>
+        <button class="secondary" id="homeBtn" type="button">Back to the case files</button>
+      </section>
+    </div>
+  </main>
+  <footer>Based on Teacher Irene’s Case Files · Year 6 Unit 10 Lesson 3 Grammar</footer>
+</div>
+
+<script src="audio/manifest.js"></script>
+<script src="js/bank.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
