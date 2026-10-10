@@ -1,7 +1,7 @@
 # 侦探语法局 Question Tags · 交接
 
 ## ⏯️ 目前做到哪
-2026-10-10 已上线 v1.0：https://tahun6-bi-questiontags.vercel.app ，Hub 已上架，`npm run check` 全过，push main 自动部署。verify 验收的小问题（缩写动词讲解、错选保留线索、问号换行、答对后空白）已修。
+2026-10-10 已上线 v1.0：https://tahun6-bi-questiontags.vercel.app ，Hub 已上架，`npm run check` 全过，push main 自动部署。10-11 按老师反馈改：选项区居中、代词 4+4 两排、人名换成性别明确的常见名（7 题音档已重录）。决定与踩坑见 `agents.md`。
 
 ## 🚦 目前状态
 - 课本出处：Year 6 英文 Unit 10 Lesson 3 Grammar（Pupil's Book p.125、Workbook p.104）
@@ -20,4 +20,4 @@
 - 拓展档案本机测试可加 `?unlock=1`。
 
 ## 🕐 最后更新
-2026-10-10
+2026-10-11（Claude Sonnet 5.5）· git push：待推→见下
