@@ -110,7 +110,7 @@
     el.fill.style.width = (S.idx / S.total) * 100 + '%';
     el.caseNumber.textContent = S.caseObj.title.toUpperCase() + ' · STATEMENT ' + (S.idx + 1) + ' OF ' + S.total;
     el.feedback.hidden = true; el.nextBtn.hidden = true;
-    el.clueBtn.hidden = false; el.clueBtn.disabled = false; el.clueText.textContent = '';
+    el.clueBtn.parentElement.hidden = false; el.clueBtn.disabled = false; el.clueText.textContent = '';
     drawStatement();
     renderStep();
   }
@@ -201,7 +201,7 @@
     const q = cur();
     drawStatement(true);
     el.stepTitle.innerHTML = ''; el.choices.innerHTML = '';
-    el.clueBtn.hidden = true; el.clueText.textContent = '';
+    el.clueBtn.parentElement.hidden = true; el.clueText.textContent = '';
     if (!S.dirty) S.clean++; else S.missed.push(q);
     el.fbVerdict.textContent = S.dirty ? 'Solved — with a little help.' : 'Solved! Clean work, detective.';
     el.fbText.textContent = explain(q);

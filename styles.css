@@ -58,7 +58,7 @@ body {
 /* 答题 */
 .case-number { font-family: var(--display); font-size: 14px; color: var(--brass-text); letter-spacing: .08em; margin-bottom: 12px; }
 .statement { font-size: clamp(24px, 4.6vw, 34px); font-weight: 700; line-height: 1.4; margin: 0 0 20px; }
-.statement .slot { display: inline-block; min-width: 2.6em; padding: 0 8px; margin: 0 2px; border-bottom: 4px dotted var(--brass-text); text-align: center; color: var(--green); }
+.statement .slot { display: inline-block; min-width: 2.2em; padding: 0 4px; margin: 0 0 0 4px; border-bottom: 4px dotted var(--brass-text); text-align: center; color: var(--green); }
 .statement .slot.empty { color: transparent; }
 .statement .v, .statement .n, .statement .s { border-radius: 4px; transition: background .2s; }
 .statement[data-hl="verb"] .v { background: var(--hl); box-shadow: 0 0 0 3px var(--hl); }
@@ -88,7 +88,7 @@ body {
 
 .feedback { margin-top: 18px; padding: 16px 18px; border-radius: 8px; font-size: 17px; line-height: 1.55; background: #e5f1ea; border: 1px solid var(--green); color: #1d4a32; }
 .feedback .verdict { font-family: var(--display); font-size: 20px; display: block; margin-bottom: 4px; }
-.say-btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-family: var(--body); font-size: 16px; font-weight: 700; color: var(--ink); background: #fff; border: 2px solid var(--ink); border-radius: 8px; padding: 8px 14px; cursor: pointer; min-height: 44px; }
+.say-btn { display: flex; width: fit-content; align-items: center; gap: 8px; margin-top: 10px; font-family: var(--body); font-size: 16px; font-weight: 700; color: var(--ink); background: #fff; border: 2px solid var(--ink); border-radius: 8px; padding: 8px 14px; cursor: pointer; min-height: 44px; }
 
 button.primary { display: block; width: 100%; margin-top: 18px; background: var(--red); color: #fff; border: none; padding: 16px; font-size: 18px; font-weight: 700; font-family: var(--body); border-radius: 8px; cursor: pointer; box-shadow: 0 6px 0 var(--red-deep); transition: transform .08s, box-shadow .08s; }
 button.primary:active { transform: translateY(4px); box-shadow: 0 2px 0 var(--red-deep); }
