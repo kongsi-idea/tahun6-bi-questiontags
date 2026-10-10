@@ -20,4 +20,4 @@
 - 拓展档案本机测试可加 `?unlock=1`。
 
 ## 🕐 最后更新
-2026-10-11（Claude Sonnet 5.5）· git push：待推→见下
+2026-10-11（Claude Sonnet 5.5）· git push：✅ 已推
