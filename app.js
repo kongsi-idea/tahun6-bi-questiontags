@@ -143,6 +143,7 @@
     }
     el.stepTitle.innerHTML = '<span class="num">Step ' + S.step + '/3</span>' + esc(title);
     el.choices.innerHTML = '';
+    el.choices.className = 'choices' + (S.step === 3 ? ' grid4' : '');
     chips.forEach((txt, i) => {
       const b = document.createElement('button');
       b.type = 'button'; b.className = 'choice' + (S.step === 1 ? ' wide' : '');

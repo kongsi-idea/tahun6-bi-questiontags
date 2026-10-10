@@ -56,8 +56,8 @@ body {
 .case-card:disabled { opacity: .55; cursor: default; background: rgba(255,255,255,.5); }
 
 /* 答题 */
-.case-number { font-family: var(--display); font-size: 14px; color: var(--brass-text); letter-spacing: .08em; margin-bottom: 12px; }
-.statement { font-size: clamp(24px, 4.6vw, 34px); font-weight: 700; line-height: 1.4; margin: 0 0 20px; }
+.case-number { text-align: center; font-family: var(--display); font-size: 14px; color: var(--brass-text); letter-spacing: .08em; margin-bottom: 12px; }
+.statement { text-align: center; font-size: clamp(24px, 4.6vw, 34px); font-weight: 700; line-height: 1.4; margin: 0 0 20px; }
 .statement .slot { display: inline-block; min-width: 2.2em; padding: 0 4px; margin: 0 0 0 4px; border-bottom: 4px dotted var(--brass-text); text-align: center; color: var(--green); }
 .statement .slot.empty { color: transparent; }
 .statement .tail { white-space: nowrap; }
@@ -65,9 +65,10 @@ body {
 .statement[data-hl="verb"] .v { background: var(--hl); box-shadow: 0 0 0 3px var(--hl); }
 .statement[data-hl="neg"] .n { background: #F4B7AE; box-shadow: 0 0 0 3px #F4B7AE; }
 .statement[data-hl="subj"] .s { background: #BFE3CF; box-shadow: 0 0 0 3px #BFE3CF; }
-.step-title { font-size: 19px; font-weight: 700; margin-bottom: 12px; }
+.step-title { font-size: 19px; font-weight: 700; margin-bottom: 12px; text-align: center; }
 .step-title .num { font-family: var(--display); color: var(--brass-text); margin-right: 6px; }
-.choices { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+.choices { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 16px; }
+.choices.grid4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 560px; margin-left: auto; margin-right: auto; }
 .choice {
   position: relative; min-width: 96px; min-height: 60px; padding: 10px 22px; font-family: var(--body); font-size: 24px; font-weight: 700;
   background: #fff; color: var(--charcoal); border: 2px solid rgba(0,0,0,.16); border-radius: 10px; cursor: pointer;
@@ -79,13 +80,13 @@ body {
 .choice.wrong { border-color: var(--red); background: #f8ecea; color: #6b241c; animation: shake .3s; }
 .choice.right { border-color: var(--green); background: #e5f1ea; color: #1d4a32; }
 .choice:disabled { cursor: default; }
-.choice.wide { flex: 1 1 200px; }
+.choice.wide { flex: 0 1 220px; }
 @keyframes shake { 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
 
-.clue-row { display: flex; align-items: flex-start; gap: 14px; flex-wrap: wrap; min-height: 44px; }
+.clue-row { display: flex; justify-content: center; align-items: flex-start; gap: 14px; flex-wrap: wrap; min-height: 44px; }
 .clue-btn { font-family: var(--body); font-size: 16px; font-weight: 700; color: var(--ink); background: transparent; border: 2px solid var(--ink); border-radius: 8px; padding: 9px 16px; cursor: pointer; min-height: 44px; }
 .clue-btn:disabled { opacity: .45; cursor: default; }
-.clue-text { flex: 1 1 260px; font-size: 16px; line-height: 1.5; padding-top: 8px; color: #43391f; }
+.clue-text { flex: 0 1 420px; text-align: center; font-size: 16px; line-height: 1.5; padding-top: 8px; color: #43391f; }
 
 .feedback { margin-top: 18px; padding: 16px 18px; border-radius: 8px; font-size: 17px; line-height: 1.55; background: #e5f1ea; border: 1px solid var(--green); color: #1d4a32; }
 .feedback .verdict { font-family: var(--display); font-size: 20px; display: block; margin-bottom: 4px; }
@@ -116,3 +117,9 @@ footer { text-align: center; color: rgba(242, 232, 213, .78); font-size: 13px; m
   .case-card h2 { font-size: 19px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+.choices.grid4 .choice { min-width: 0; padding: 10px 4px; }
+@media (max-width: 560px) { .choices.grid4 { gap: 8px; } .choices.grid4 .choice { font-size: 20px; } }
+.clue-row { flex-direction: column; align-items: center; gap: 8px; }
+.clue-text:empty { display: none; }
+.clue-text { flex: 0 1 auto; max-width: 560px; padding-top: 0; }
+.statement .slot + .slot { margin-left: 12px; }

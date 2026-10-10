@@ -63,31 +63,31 @@ window.BANK = [
    },
    {
     "id": "b05",
-    "raw": "[Pat Plump] {is} drawing hieroglyphics",
-    "plain": "Pat Plump is drawing hieroglyphics",
+    "raw": "[Tom] {is} drawing hieroglyphics",
+    "plain": "Tom is drawing hieroglyphics",
     "tail": "isn't he",
     "aux": "isn't",
     "pro": "he",
     "stmtNeg": false,
     "base": "is",
-    "subj": "Pat Plump",
+    "subj": "Tom",
     "verb": "is",
     "src": "O",
-    "say": "Pat Plump is drawing hieroglyphics, isn't he?"
+    "say": "Tom is drawing hieroglyphics, isn't he?"
    },
    {
     "id": "b06",
-    "raw": "[Lucy Specks] {is} a university student",
-    "plain": "Lucy Specks is a university student",
+    "raw": "[Lucy] {is} a university student",
+    "plain": "Lucy is a university student",
     "tail": "isn't she",
     "aux": "isn't",
     "pro": "she",
     "stmtNeg": false,
     "base": "is",
-    "subj": "Lucy Specks",
+    "subj": "Lucy",
     "verb": "is",
     "src": "O",
-    "say": "Lucy Specks is a university student, isn't she?"
+    "say": "Lucy is a university student, isn't she?"
    },
    {
     "id": "b07",
@@ -133,17 +133,17 @@ window.BANK = [
    },
    {
     "id": "b10",
-    "raw": "[The police officer] {is} here",
-    "plain": "The police officer is here",
+    "raw": "[The policeman] {is} here",
+    "plain": "The policeman is here",
     "tail": "isn't he",
     "aux": "isn't",
     "pro": "he",
     "stmtNeg": false,
     "base": "is",
-    "subj": "The police officer",
+    "subj": "The policeman",
     "verb": "is",
     "src": "O",
-    "say": "The police officer is here, isn't he?"
+    "say": "The policeman is here, isn't he?"
    },
    {
     "id": "b11",
@@ -280,17 +280,17 @@ window.BANK = [
    },
    {
     "id": "c06",
-    "raw": "[Tim Tall] {can't|n} see the thief",
-    "plain": "Tim Tall can't see the thief",
+    "raw": "[Ali] {can't|n} see the thief",
+    "plain": "Ali can't see the thief",
     "tail": "can he",
     "aux": "can",
     "pro": "he",
     "stmtNeg": true,
     "base": "can",
-    "subj": "Tim Tall",
+    "subj": "Ali",
     "verb": "can't",
     "src": "O",
-    "say": "Tim Tall can't see the thief, can he?"
+    "say": "Ali can't see the thief, can he?"
    },
    {
     "id": "c07",
@@ -322,17 +322,17 @@ window.BANK = [
    },
    {
     "id": "c09",
-    "raw": "[Miss Pepper] {can't|n} drive a big car",
-    "plain": "Miss Pepper can't drive a big car",
+    "raw": "[Mary] {can't|n} drive a big car",
+    "plain": "Mary can't drive a big car",
     "tail": "can she",
     "aux": "can",
     "pro": "she",
     "stmtNeg": true,
     "base": "can",
-    "subj": "Miss Pepper",
+    "subj": "Mary",
     "verb": "can't",
     "src": "O",
-    "say": "Miss Pepper can't drive a big car, can she?"
+    "say": "Mary can't drive a big car, can she?"
    },
    {
     "id": "c10",
@@ -455,17 +455,17 @@ window.BANK = [
    },
    {
     "id": "d05",
-    "raw": "[Dr Green] {works} in the laboratory",
-    "plain": "Dr Green works in the laboratory",
+    "raw": "[Peter] {works} in the laboratory",
+    "plain": "Peter works in the laboratory",
     "tail": "doesn't he",
     "aux": "doesn't",
     "pro": "he",
     "stmtNeg": false,
     "base": "does",
-    "subj": "Dr Green",
+    "subj": "Peter",
     "verb": "works",
     "src": "O",
-    "say": "Dr Green works in the laboratory, doesn't he?"
+    "say": "Peter works in the laboratory, doesn't he?"
    },
    {
     "id": "d06",
@@ -539,17 +539,17 @@ window.BANK = [
    },
    {
     "id": "d11",
-    "raw": "[Sue Snaps] {borrows} the camera",
-    "plain": "Sue Snaps borrows the camera",
+    "raw": "[Mei Ling] {borrows} the camera",
+    "plain": "Mei Ling borrows the camera",
     "tail": "doesn't she",
     "aux": "doesn't",
     "pro": "she",
     "stmtNeg": false,
     "base": "does",
-    "subj": "Sue Snaps",
+    "subj": "Mei Ling",
     "verb": "borrows",
     "src": "O",
-    "say": "Sue Snaps borrows the camera, doesn't she?"
+    "say": "Mei Ling borrows the camera, doesn't she?"
    },
    {
     "id": "d12",
