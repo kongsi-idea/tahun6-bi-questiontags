@@ -60,6 +60,7 @@ body {
 .statement { font-size: clamp(24px, 4.6vw, 34px); font-weight: 700; line-height: 1.4; margin: 0 0 20px; }
 .statement .slot { display: inline-block; min-width: 2.2em; padding: 0 4px; margin: 0 0 0 4px; border-bottom: 4px dotted var(--brass-text); text-align: center; color: var(--green); }
 .statement .slot.empty { color: transparent; }
+.statement .tail { white-space: nowrap; }
 .statement .v, .statement .n, .statement .s { border-radius: 4px; transition: background .2s; }
 .statement[data-hl="verb"] .v { background: var(--hl); box-shadow: 0 0 0 3px var(--hl); }
 .statement[data-hl="neg"] .n { background: #F4B7AE; box-shadow: 0 0 0 3px #F4B7AE; }

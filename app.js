@@ -44,6 +44,7 @@
 
   // ---------- 讲解 ----------
   function explain(q) {
+    const vw = q.verb[0] === "'" ? q.subj.split(' ').pop() + q.verb : q.verb;
     const parts = [q.stmtNeg
       ? 'The statement is negative, so the tag is positive.'
       : 'The statement is positive, so the tag is negative.'];
@@ -52,11 +53,11 @@
     } else if (q.base === 'can') {
       parts.push('“can” comes back in the tag: ' + q.aux + '.');
     } else if (q.base === 'is' || q.base === 'are') {
-      parts.push('“' + q.verb + '” is a form of be, so the tag repeats be: ' + q.aux + '.');
+      parts.push('“' + vw + '” is a form of be, so the tag repeats be: ' + q.aux + '.');
     } else if (/^do(es)?n't$/.test(q.verb)) {
-      parts.push('“' + q.verb + '” is a do-verb, so the tag uses “' + q.aux + '”.');
+      parts.push('“' + vw + '” is a do-verb, so the tag uses “' + q.aux + '”.');
     } else {
-      parts.push('“' + q.verb + '” is an action verb (not be, not can), so the tag uses do/does: ' + q.aux + '.');
+      parts.push('“' + vw + '” is an action verb (not be, not can), so the tag uses do/does: ' + q.aux + '.');
     }
     if (q.pro !== 'I') parts.push('The subject “' + q.subj + '” comes back as “' + q.pro + '”.');
     return parts.join(' ');
@@ -121,14 +122,14 @@
       ? '<span class="slot">' + esc(q.tail) + '</span>'
       : '<span class="slot' + (S.picks.helper ? '' : ' empty') + '">' + esc(S.picks.helper || '·') + '</span>' +
         '<span class="slot' + (S.picks.pro ? '' : ' empty') + '">' + esc(S.picks.pro || '·') + '</span>';
-    el.statement.innerHTML = renderStatement(q.raw) + ', ' + tailHtml + '?';
+    el.statement.innerHTML = renderStatement(q.raw) + ', <span class="tail">' + tailHtml + '?</span>';
     el.statement.dataset.hl = '';
   }
 
   function renderStep() {
     const q = cur();
     el.statement.dataset.hl = '';
-    el.clueText.textContent = ''; S.clue = 0; el.clueBtn.disabled = false;
+    el.clueText.textContent = ''; S.clue = 0; S.lastClue = ''; el.clueBtn.disabled = false;
     let title, chips;
     if (S.step === 1) {
       title = 'Is the statement positive or negative?';
@@ -171,7 +172,7 @@
     } else {
       S.dirty = true;
       btn.classList.add('wrong'); btn.disabled = true;
-      el.clueText.textContent = 'Not quite — try another one.';
+      el.clueText.textContent = 'Not quite — try another one.' + (S.lastClue ? '  Clue: ' + S.lastClue : '');
     }
   }
 
@@ -192,7 +193,8 @@
   el.clueBtn.addEventListener('click', () => {
     const list = CLUES[S.step];
     S.dirty = true;
-    el.clueText.textContent = list[S.clue]();
+    S.lastClue = list[S.clue]();
+    el.clueText.textContent = S.lastClue;
     S.clue++;
     if (S.clue >= list.length) el.clueBtn.disabled = true;
   });
