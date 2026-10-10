@@ -1,7 +1,7 @@
 # 侦探语法局 Question Tags · 交接
 
 ## ⏯️ 目前做到哪
-方案 2026-10-10 老师通过（Tahun 6，Irene 老师内容，视觉 A 案卷纸质，拓展档案后解锁，朗读学生自选）。已开发完，本机 e2e 全过，等 verify 子代理验收和老师本机实测。未部署、未上架。
+2026-10-10 已上线 v1.0：https://tahun6-bi-questiontags.vercel.app ，Hub 已上架，`npm run check` 全过，push main 自动部署。verify 验收的小问题（缩写动词讲解、错选保留线索、问号换行、答对后空白）已修。
 
 ## 🚦 目前状态
 - 课本出处：Year 6 英文 Unit 10 Lesson 3 Grammar（Pupil's Book p.125、Workbook p.104）
@@ -10,8 +10,8 @@
 - 署名：Hub `creator: { name: "Teacher Irene Wong", initial: "W" }`（与 tahun2-bi-punctuation 一致），工具页脚同名。
 
 ## ➡️ 下一步
-1. 老师本机点过并说「可以发布」。
-2. 部署（`--scope kongsi-idea`）→ set-vercel-secret／add-actions → Hub 登记（封面 cx-draw 生图＋横式截图）→ `npm run check -- tahun6-bi-questiontags`。
+1. Irene 老师与学生试用后收集反馈（题量、线索、拓展档案）。
+2. 待办：iPhone／Safari 真机实测；DSKP 代码核对官方 PDF 后再收进 dskp-index。
 
 ## ⚠️ 注意事项
 - 题库唯一来源 `build-content.py`（生成 js/bank.js、content/sentences.md、content/bank.json），改完再跑 `gen-voice.py` 补录音。
